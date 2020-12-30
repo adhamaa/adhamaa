@@ -94,12 +94,12 @@
 
 <!-- </details> -->
 
-<details>
+<!-- <details> -->
   <summary>:zap: GitHub Stats</summary>
 
 <img align="left" alt="adhamaa's GitHub Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=adhamaa&show_icons=true&hide_border=true" />
 
-</details>
+<!-- </details> -->
 
 [website]: https://codeSTACKr.com
 [course]: http://vsCodeHero.com
