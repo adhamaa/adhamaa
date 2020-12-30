@@ -94,6 +94,10 @@
 
 <!-- </details> -->
 
+📊 **This week I spent my time on**
+
+![Wwakatime stats](https://github-readme-stats-taupe-two.vercel.app/api/wakatime?username=adhamaa&hide_title=true&hide_border=true&langs_count=5)
+
 <details>
   <!-- <summary>:zap: GitHub Stats</summary>
 
