@@ -103,14 +103,9 @@
 
 <!-- </details> -->
 
-[website]: https://codeSTACKr.com
-[course]: http://vsCodeHero.com
+[website]: https://example.com
 [twitter]: https://twitter.com/adhamakmal
 [youtube]: https://youtube.com/adhamaa92
 [instagram]: https://instagram.com/adhamaa
 [linkedin]: https://www.linkedin.com/in/adham-akmal-azmi-421a7b134/
-[webdevplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAJ0WbEsFA9W3I1W-g_BTsbt
-[jsplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALRJKu7wfXby3MKeflhTu6B
-[cssplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALSdvZuEh6gqQdmDoDIoqz4
-[reactplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAK4TdffpxKY3QGyHCpxFcQ0
 [#]: #
