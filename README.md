@@ -94,14 +94,23 @@
 
 <!-- </details> -->
 
-### :zap: GitHub Stats:
+### ⚡ GitHub Stats:
 
-<!-- <details> -->
-  <!-- <summary>:zap: GitHub Stats</summary> -->
+<a href="https://github.com/adhamaa/github-readme-stats">
+  <img height=200 align="center" src="https://github-readme-stats-six-pied.vercel.app/api?username=adhamaa&show_icons=true&theme=dark" />
+</a>
+<a href="https://github.com/adhamaa/convoychat">
+  <img height=200 align="center" src="https://github-readme-stats-six-pied.vercel.app/api/top-langs?username=adhamaa&show_icons=true&theme=dark&layout=compact&langs_count=8&card_width=320" />
+</a>
 
-<img align="left" alt="adhamaa's GitHub Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=adhamaa&show_icons=true&hide_border=true" />
+<!-- ### Pinned Repos
 
-<!-- </details> -->
+<a href="https://github.com/adhamaa/github-readme-stats">
+  <img align="center" src="https://github-readme-stats-six-pied.vercel.app/api/pin/?username=adhamaa&repo=github-readme-stats" />
+</a>
+<a href="https://github.com/adhamaa/adhamaa">
+  <img align="center" src="https://github-readme-stats-six-pied.vercel.app/api/pin/?username=adhamaa&repo=convoychat" />
+</a> -->
 
 [website]: https://example.com
 [twitter]: https://twitter.com/adhamakmal
