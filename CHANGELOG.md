@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://github.com/adhamaa/adhamaa/compare/v0.9.0...v0.10.0) (2023-08-17)
+
+
+### Features
+
+* glassmorphic navbar ([0581b7d](https://github.com/adhamaa/adhamaa/commit/0581b7dd6cabde847e7d3a7b5f8721b5a349887e))
+
 ## [0.9.0](https://github.com/adhamaa/adhamaa/compare/v1.3.0...v0.9.0) (2023-08-17)
 
 
