@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.14.0](https://github.com/adhamaa/adhamaa/compare/v1.3.6...v0.14.0) (2023-08-17)
+
+
+### Features
+
+* package.json ([6729419](https://github.com/adhamaa/adhamaa/commit/67294197c8286875518234f7e456a2af8351856b))
+
+
+### Miscellaneous Chores
+
+* release 0.14.0 ([70b1e60](https://github.com/adhamaa/adhamaa/commit/70b1e60f792c2bf7844c440ad24c1927f7c98f51))
+
 ## [1.3.6](https://github.com/adhamaa/adhamaa/compare/v1.3.5...v1.3.6) (2023-08-17)
 
 
