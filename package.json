@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "release": "git commit --allow-empty -m \"chore: release\"",
-    "release:as": "git commit --allow-empty -m \"chore: release %npm_config_version%\" -m \"release-as: %npm_config_version%\""
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
