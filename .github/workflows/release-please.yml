@@ -1,13 +1,13 @@
+name: release-please
 on:
   push:
-    branches:
-      - master
+    branches: [master, dev]
+  pull_request: {}
+  workflow_dispatch:
 
 permissions:
   contents: write
   pull-requests: write
-
-name: release-please
 
 jobs:
   release-please:
