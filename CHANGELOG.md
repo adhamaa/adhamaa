@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.7](https://github.com/adhamaa/adhamaa/compare/v0.14.0...v1.3.7) (2023-08-17)
+
+
+### Features
+
+* dev branch release ([85fae58](https://github.com/adhamaa/adhamaa/commit/85fae583badc90f4218a0834ad77e941dadad413))
+
+
+### Miscellaneous Chores
+
+* release 1.3.7 ([a52ff5e](https://github.com/adhamaa/adhamaa/commit/a52ff5e62bba2e97e44231cf3da3ec6b85daa53d))
+
 ## [0.14.0](https://github.com/adhamaa/adhamaa/compare/v1.3.6...v0.14.0) (2023-08-17)
 
 
