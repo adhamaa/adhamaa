@@ -1,12 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -72,5 +75,23 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-}
+  plugins: [
+    require("tailwindcss-animate"),
+    // firefox only modifier
+    plugin(({ addVariant, e, postcss }: any) => {
+      addVariant("firefox", ({ container, separator }: any) => {
+        const isFirefoxRule = postcss.atRule({
+          name: "supports",
+          params: "(-moz-appearance:none)",
+        });
+        isFirefoxRule.append(container.nodes);
+        container.append(isFirefoxRule);
+        isFirefoxRule.walkRules((rule: { selector: string }) => {
+          rule.selector = `.${e(
+            `firefox${separator}${rule.selector.slice(1).replaceAll("\\", "")}`
+          )}`;
+        });
+      });
+    }),
+  ],
+};
