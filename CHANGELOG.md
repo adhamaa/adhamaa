@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/adhamaa/adhamaa/compare/v1.2.0...v1.2.1) (2023-08-17)
+
+
+### Bug Fixes
+
+* navbar to own components ([3a57532](https://github.com/adhamaa/adhamaa/commit/3a575323c554e27dd0d7a9db77a57b32e6018d42))
+
 ## [1.2.0](https://github.com/adhamaa/adhamaa/compare/v1.1.0...v1.2.0) (2023-08-17)
 
 
