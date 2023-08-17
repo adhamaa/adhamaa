@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.6](https://github.com/adhamaa/adhamaa/compare/v1.3.5...v1.3.6) (2023-08-17)
+
+
+### Bug Fixes
+
+* another typo ([926d592](https://github.com/adhamaa/adhamaa/commit/926d5922badcfceb2f6cc1b140edd2f2a5986beb))
+
 ## [1.3.5](https://github.com/adhamaa/adhamaa/compare/v1.3.4...v1.3.5) (2023-08-17)
 
 
