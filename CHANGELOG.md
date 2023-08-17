@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.1.0](https://github.com/adhamaa/adhamaa/compare/v1.0.0...v1.1.0) (2023-08-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* setup && add shadcn/ui
+
+### Features
+
+* setup && add shadcn/ui ([7dd684d](https://github.com/adhamaa/adhamaa/commit/7dd684de4ec17c0f50b403c7bfbc3a1ba00fa07b))
+
+
+### Bug Fixes
+
+* app name ([ef07d14](https://github.com/adhamaa/adhamaa/commit/ef07d14a6e7e914b15e40f07de410a52b9e8db35))
+
+
+### Miscellaneous Chores
+
+* release 0.2.0 ([3f362c4](https://github.com/adhamaa/adhamaa/commit/3f362c42aae25ec82a4a8f26f962991b41e3ed19))
+* release 1.1.0 ([df083b1](https://github.com/adhamaa/adhamaa/commit/df083b1bab4854a0d59359ab0e49c78c268bde85))
+
 ## [1.0.0](https://github.com/adhamaa/adhamaa/compare/v0.2.0...v1.0.0) (2023-08-17)
 
 
