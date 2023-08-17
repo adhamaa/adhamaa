@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.5](https://github.com/adhamaa/adhamaa/compare/v1.3.4...v1.3.5) (2023-08-17)
+
+
+### Bug Fixes
+
+* update release from ajiq ([0e5adff](https://github.com/adhamaa/adhamaa/commit/0e5adffbbc232e6c01a220fe2249e2d797b9f6c4))
+
 ## [1.3.4](https://github.com/adhamaa/adhamaa/compare/v1.3.3...v1.3.4) (2023-08-17)
 
 
