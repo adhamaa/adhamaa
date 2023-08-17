@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/adhamaa/adhamaa/compare/v1.3.0...v0.9.0) (2023-08-17)
+
+
+### Miscellaneous Chores
+
+* release ([317b6e4](https://github.com/adhamaa/adhamaa/commit/317b6e463c21d40966de9d0ca16b5d9f662c28b3))
+
 ## [1.3.0](https://github.com/adhamaa/adhamaa/compare/v1.2.1...v1.3.0) (2023-08-17)
 
 
