@@ -109,7 +109,7 @@ export default function TableDemo() {
   return (
     <Table className="w-[50vw]">
       <TableCaption>A list of your recent invoices.</TableCaption>
-
+      {/* Use your own markup, customize however you want using the power of TanStack Table */}
       <TableHeader>
         {table.getHeaderGroups().map((headerGroup) => (
           <TableRow key={headerGroup.id}>
