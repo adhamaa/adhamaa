@@ -7,11 +7,11 @@ echo "1-release-as"
 echo "2-release"
 echo "ctrl-c to exit"
 read strUser
+read strReleaseVer
 
 case $strUser in
 1)
     echo "Enter release version: "
-    read strReleaseVer
     git commit --allow-empty -m "chore: release $strReleaseVer" -m "release-as: $strReleaseVer"
 
     #error checking
@@ -30,7 +30,7 @@ case $strUser in
         # get value from package.json
         strReleaseVer=$(node -p -e "require('./package.json').version")
 
-        echo "Version v$strReleaseVer release success!"
+        echo "Version release success!"
     elif [ $? == 1 ]; then
         echo "Version release failed"
     fi
