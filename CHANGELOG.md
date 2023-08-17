@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/adhamaa/adhamaa/compare/v1.3.1...v1.3.2) (2023-08-17)
+
+
+### Bug Fixes
+
+* release script ([039fe30](https://github.com/adhamaa/adhamaa/commit/039fe30e88ac16c08d97ca2381e74bdf76669899))
+
 ## [1.3.1](https://github.com/adhamaa/adhamaa/compare/v0.11.0...v1.3.1) (2023-08-17)
 
 
