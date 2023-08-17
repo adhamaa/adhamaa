@@ -15,6 +15,9 @@ function Navbar() {
             <li className="">
               <Link href="/about">About</Link>
             </li>
+            <li className="">
+              <Link href="/table">Table</Link>
+            </li>
           </ul>
           <ModeToggle />
         </nav>

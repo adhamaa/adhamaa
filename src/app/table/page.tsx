@@ -1,5 +1,14 @@
-import * as React from "react";
+"use client";
 
+import * as React from "react";
+import {
+  flexRender,
+  MRT_GlobalFilterTextInput,
+  MRT_TablePagination,
+  MRT_ToolbarAlertBanner,
+  type MRT_ColumnDef,
+  useMantineReactTable,
+} from "mantine-react-table";
 import {
   Table,
   TableBody,
@@ -10,7 +19,14 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-const invoices = [
+type Invoices = {
+  invoice: string;
+  paymentStatus: string;
+  totalAmount: string;
+  paymentMethod: string;
+};
+
+const invoices: Invoices[] = [
   {
     invoice: "INV001",
     paymentStatus: "Paid",
@@ -55,25 +71,74 @@ const invoices = [
   },
 ];
 
-export function TableDemo() {
+const columns: MRT_ColumnDef<Invoices>[] = [
+  {
+    accessorKey: "invoice",
+    header: "Invoice",
+  },
+  {
+    accessorKey: "paymentStatus",
+    header: "Status",
+  },
+  {
+    accessorKey: "totalAmount",
+    header: "Method",
+  },
+  {
+    accessorKey: "paymentMethod",
+    header: "Amount",
+  },
+];
+
+export default function TableDemo() {
+  const table = useMantineReactTable({
+    columns,
+    data: React.useMemo(() => invoices, []) ?? [], //must be memoized or stable (useState, useMemo, defined outside of this component, etc.)
+    //MRT display columns can still work, optionally override cell renders with `displayColumnDefOptions`
+    enableRowSelection: true,
+    initialState: {
+      pagination: { pageSize: 5, pageIndex: 0 },
+      showGlobalFilter: true,
+    },
+    //customize the MRT components
+    mantinePaginationProps: {
+      rowsPerPageOptions: ["5", "10", "15"],
+    },
+    paginationDisplayMode: "pages",
+  });
   return (
-    <Table>
+    <Table className="w-[50vw]">
       <TableCaption>A list of your recent invoices.</TableCaption>
+      {/* Use your own markup, customize however you want using the power of TanStack Table */}
       <TableHeader>
-        <TableRow>
-          <TableHead className="w-[100px]">Invoice</TableHead>
-          <TableHead>Status</TableHead>
-          <TableHead>Method</TableHead>
-          <TableHead className="text-right">Amount</TableHead>
-        </TableRow>
+        {table.getHeaderGroups().map((headerGroup) => (
+          <TableRow key={headerGroup.id}>
+            {headerGroup.headers.map((header) => (
+              <TableHead key={header.id}>
+                {header.isPlaceholder
+                  ? null
+                  : flexRender(
+                      header.column.columnDef.Header ??
+                        header.column.columnDef.header,
+
+                      header.getContext()
+                    )}
+              </TableHead>
+            ))}
+          </TableRow>
+        ))}
       </TableHeader>
       <TableBody>
-        {invoices.map((invoice) => (
-          <TableRow key={invoice.invoice}>
-            <TableCell className="font-medium">{invoice.invoice}</TableCell>
-            <TableCell>{invoice.paymentStatus}</TableCell>
-            <TableCell>{invoice.paymentMethod}</TableCell>
-            <TableCell className="text-right">{invoice.totalAmount}</TableCell>
+        {table.getRowModel().rows.map((row) => (
+          <TableRow key={row.id}>
+            {row.getVisibleCells().map((cell) => (
+              <TableCell key={cell.id}>
+                {flexRender(
+                  cell.column.columnDef.Cell ?? cell.column.columnDef.cell,
+                  cell.getContext()
+                )}
+              </TableCell>
+            ))}
           </TableRow>
         ))}
       </TableBody>
