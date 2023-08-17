@@ -7,11 +7,11 @@ echo "1-release-as"
 echo "2-release"
 echo "ctrl-c to exit"
 read strUser
-read strReleaseVer
 
 case $strUser in
 1)
     echo "Enter release version: "
+    read strReleaseVer
     git commit --allow-empty -m "chore: release $strReleaseVer" -m "release-as: $strReleaseVer"
 
     #error checking
