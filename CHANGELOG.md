@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/adhamaa/adhamaa/compare/v0.10.0...v0.11.0) (2023-08-17)
+
+
+### Features
+
+* integrate MRT table lib ([a6a6186](https://github.com/adhamaa/adhamaa/commit/a6a61868613243533145175f7fb008ffb6431ec0))
+
 ## [0.10.0](https://github.com/adhamaa/adhamaa/compare/v0.9.0...v0.10.0) (2023-08-17)
 
 
