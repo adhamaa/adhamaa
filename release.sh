@@ -57,12 +57,7 @@ case $strUser2 in
     fi
     ;;
 
-2)
-    exit
+2)  exit
     ;;
 
 esac
-
-echo " "
-echo "Continue to merge?"
-ech
