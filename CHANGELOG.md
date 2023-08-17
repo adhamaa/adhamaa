@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/adhamaa/adhamaa/compare/v1.1.0...v1.2.0) (2023-08-17)
+
+
+### Features
+
+* darkmode toggle ([699234b](https://github.com/adhamaa/adhamaa/commit/699234bc7e5e013899b69b3423f1580925061d71))
+
 ## [1.1.0](https://github.com/adhamaa/adhamaa/compare/v1.0.0...v1.1.0) (2023-08-17)
 
 
