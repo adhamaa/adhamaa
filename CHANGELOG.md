@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.12.0](https://github.com/adhamaa/adhamaa/compare/v0.10.0...v0.12.0) (2023-08-17)
+
+
+### Features
+
+* integrate MRT table lib ([a6a6186](https://github.com/adhamaa/adhamaa/commit/a6a61868613243533145175f7fb008ffb6431ec0))
+
+
+### Bug Fixes
+
+* release script ([039fe30](https://github.com/adhamaa/adhamaa/commit/039fe30e88ac16c08d97ca2381e74bdf76669899))
+* release script ([44efa69](https://github.com/adhamaa/adhamaa/commit/44efa694731a9de1710a3022504f42241eb318a9))
+* script ([047d2df](https://github.com/adhamaa/adhamaa/commit/047d2df854839e7c5044c80a01d50d940be5d848))
+
+
+### Miscellaneous Chores
+
+* release %npm_config_version% ([c6fb63d](https://github.com/adhamaa/adhamaa/commit/c6fb63d87f9d800ed77f75223079fc23a4d6794f))
+* release 0.10.0 ([a7cd3fc](https://github.com/adhamaa/adhamaa/commit/a7cd3fc9033e8ca71836264e3d61478e97ba197b))
+* release 0.10.0 ([caf6020](https://github.com/adhamaa/adhamaa/commit/caf60203c1733bf9ae7246ee90d27c931be13a37))
+* release 0.10.0 ([5271a88](https://github.com/adhamaa/adhamaa/commit/5271a88214c4ded5f9e6a1716c68143b69e23bfd))
+* release 0.12.0 ([2ddbec5](https://github.com/adhamaa/adhamaa/commit/2ddbec519124db1a2a5e152723bb0d4a9254b8dc))
+* release 1.3.1 ([84242f6](https://github.com/adhamaa/adhamaa/commit/84242f6c5be0e11a0b99c49e6dc704f10eec282e))
+
 ## [0.10.0](https://github.com/adhamaa/adhamaa/compare/v1.3.2...v0.10.0) (2023-08-17)
 
 
