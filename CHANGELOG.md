@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/adhamaa/adhamaa/compare/v1.2.1...v1.3.0) (2023-08-17)
+
+
+### Features
+
+* footer component ([c25980e](https://github.com/adhamaa/adhamaa/commit/c25980e5bbd4794dce0fb7d820893dbf2315b739))
+
 ## [1.2.1](https://github.com/adhamaa/adhamaa/compare/v1.2.0...v1.2.1) (2023-08-17)
 
 
