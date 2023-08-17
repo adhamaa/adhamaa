@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.3](https://github.com/adhamaa/adhamaa/compare/v0.12.0...v1.3.3) (2023-08-17)
+
+
+### Bug Fixes
+
+* minor tweaks ([89685d2](https://github.com/adhamaa/adhamaa/commit/89685d21df1a011d3eaa5034b46fce4b76c24f41))
+
+
+### Miscellaneous Chores
+
+* release 1.3.3 ([cedd69f](https://github.com/adhamaa/adhamaa/commit/cedd69f59a72498dfd20c68ce8124b8848a95e0f))
+* release 1.3.3 ([e4c5f31](https://github.com/adhamaa/adhamaa/commit/e4c5f31a533b240243c87a1b422613749a2f2c4e))
+
 ## [0.12.0](https://github.com/adhamaa/adhamaa/compare/v0.10.0...v0.12.0) (2023-08-17)
 
 
