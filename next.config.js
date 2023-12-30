@@ -2,7 +2,7 @@
 const nextConfig = {
   output: "export",
   images: { unoptimized: true },
-  basePath: "/adhamaa",
+  // basePath: "/adhamaa",
 };
 
 module.exports = nextConfig;
