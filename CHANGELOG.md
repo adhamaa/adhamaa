@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.0](https://github.com/adhamaa/adhamaa/compare/v1.3.7...v1.4.0) (2023-12-30)
+
+
+### Features
+
+* clean script ([ec1d673](https://github.com/adhamaa/adhamaa/commit/ec1d673653e693752ccf0ac0e1d2351ddebf8d49))
+* upgrade ([0e90672](https://github.com/adhamaa/adhamaa/commit/0e9067234d3d66cabe65d05a1df9213ddfd94ff2))
+
+
+### Bug Fixes
+
+* img ([3c26a78](https://github.com/adhamaa/adhamaa/commit/3c26a7802b0b2a2ac58164843c4c2ec1e1343eaf))
+* remove basePath ([da2eddb](https://github.com/adhamaa/adhamaa/commit/da2eddbc43a1a31d060a700e83d487a9ce9babe4))
+
 ## [1.3.7](https://github.com/adhamaa/adhamaa/compare/v0.14.0...v1.3.7) (2023-08-17)
 
 
