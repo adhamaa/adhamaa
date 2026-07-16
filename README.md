@@ -1,25 +1,19 @@
-### Assalamualaykum, Hi I am ADHAM AA 👋
-
-<!-- [![Website](https://img.shields.io/website?label=codeSTACKr.com&style=for-the-badge&url=https%3A%2F%2Fcodestackr.com)](https://codestackr.com)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codeSTACKr?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2FcodeSTACKr&screen_name=codeSTACKr) -->
+### Assalamualaykum, Hi I am ADHAM AA ðŸ‘‹
 
 ## I'm learning forever
 
-<!-- - 🔭 I just launched my first course: [Become A VS Code SuperHero!][course]! -->
+- ðŸŒ± Iâ€™m currently learning Data Scraping & API
+- ðŸ‘¯ Iâ€™m looking to give value to others and to Islam
+- âš¡ Fun fact: I love to game and memorized Quran
 
-- 🌱 I’m currently learning Data Scraping & API 🤣
-- 👯 I’m looking to give value to others and to Islam
-- 🥅 2021 Goals: Contribute more to Open Source projects especially to Islamic Open Sources
-- ⚡ Fun fact: I love to game and memorized Quran
+## What I Stand For
 
-<!-- ### Spotify Playing 🎧
-
-[<img src="https://now-playing-codestackr.vercel.app/api/spotify-playing" alt="codeSTACKr Spotify Playing" width="350" />](https://open.spotify.com/user/swyqyimdc12jajde4vpwd2x1b) -->
+- **Continuous Learning** â€” I believe in constant growth and improvement. Every project is an opportunity to learn something new.
+- **Adding Value** â€” I aim to create solutions that help others and contribute meaningfully to the community.
+- **Quality Code** â€” I write clean, maintainable code with best practices in mind.
+- **Open Source** â€” I contribute to open source projects, especially those that serve the Islamic community.
 
 ### Connect with me:
-
-<!-- [<img align="left" alt="codeSTACKr.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website] -->
-<!-- [<img align="left" alt="codeSTACKr | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube] -->
 
 [<img align="left" alt="codeSTACKr | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
 [<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
@@ -49,52 +43,9 @@
 <br />
 <br />
 
-<!-- --- -->
-
-<!-- ### 📺 Latest YouTube Videos -->
-
-<!-- YOUTUBE:START -->
-
-<!-- - [STOP Declaring IDs!?! JavaScript Global Variables Best Practices](https://www.youtube.com/watch?v=cve1gYV7jWk)
-- [This is ALL you NEED to Become a Web Developer Today (2021)](https://www.youtube.com/watch?v=LTwFX-hitQo)
-- [Top VS Code Updates | Last 2020 Update | v1.52 Released!! | Tips & Tricks 2020](https://www.youtube.com/watch?v=dgOu1Y9xl5k)
-- [How to make a Discord Input in HTML & CSS | Micro-Interaction & JavaScript Validation](https://www.youtube.com/watch?v=3tG1jUQbuSI)
-- [Deploy Next.js on Netlify in ONE click!! | Next.js Build Plugin on Netlify](https://www.youtube.com/watch?v=NhWCEdja9W4) -->
-<!-- YOUTUBE:END -->
-
-<!-- ➡️ [more videos...](https://youtube.com/codestackr) -->
-
-<!-- --- -->
-
-<!-- ### 📕 Latest Blog Posts -->
-
-<!-- BLOG-POST-LIST:START -->
-
-<!-- - [Microinteractions: Password Validation Animation](https://dev.to/codestackr/microinteractions-password-validation-animation-5629)
-- [Notion + YouTube - A Powerful Combination for Productivity](https://dev.to/codestackr/notion-youtube-a-powerful-combination-for-productivity-1def)
-- [Regular Expressions (RegEx) Crash Course](https://dev.to/codestackr/regular-expressions-regex-crash-course-248n)
-- [Emmet Part 2 - Advanced](https://dev.to/codestackr/emmet-part-2-advanced-4c65)
-- [Deno 1.0 Released! (Easy) REST API Example](https://dev.to/codestackr/deno-1-0-released-easy-rest-api-example-2fbl) -->
-<!-- BLOG-POST-LIST:END -->
-
-<!-- ➡️ [more blog posts...](https://codestackr.com) -->
-
 ---
 
-<!-- <details> -->
-  <!-- <summary>:zap: Recent GitHub Activity</summary> -->
-
-<!--START_SECTION:activity-->
-<!-- 1. ❌ Closed PR [#14](https://github.com/codeSTACKr/codeSTACKr/pull/14) in [codeSTACKr/codeSTACKr](https://github.com/codeSTACKr/codeSTACKr)
-2. 🗣 Commented on [#14](https://github.com/codeSTACKr/codeSTACKr/issues/14) in [codeSTACKr/codeSTACKr](https://github.com/codeSTACKr/codeSTACKr)
-3. ❌ Closed PR [#7](https://github.com/codeSTACKr/codeSTACKr/pull/7) in [codeSTACKr/codeSTACKr](https://github.com/codeSTACKr/codeSTACKr)
-4. 🎉 Merged PR [#6](https://github.com/codeSTACKr/codeSTACKr/pull/6) in [codeSTACKr/codeSTACKr](https://github.com/codeSTACKr/codeSTACKr)
-5. 💪 Opened PR [#259](https://github.com/florinpop17/app-ideas/pull/259) in [florinpop17/app-ideas](https://github.com/florinpop17/app-ideas) -->
-<!--END_SECTION:activity-->
-
-<!-- </details> -->
-
-### ⚡ GitHub Stats:
+### âš¡ GitHub Stats:
 
 <a href="https://github.com/adhamaa/github-readme-stats">
   <img height=200 align="center" src="https://github-readme-stats-six-pied.vercel.app/api?username=adhamaa&show_icons=true&theme=dark" />
@@ -102,15 +53,6 @@
 <a href="https://github.com/adhamaa/convoychat">
   <img height=200 align="center" src="https://github-readme-stats-six-pied.vercel.app/api/top-langs?username=adhamaa&show_icons=true&theme=dark&layout=compact&langs_count=8&card_width=320" />
 </a>
-
-<!-- ### Pinned Repos
-
-<a href="https://github.com/adhamaa/github-readme-stats">
-  <img align="center" src="https://github-readme-stats-six-pied.vercel.app/api/pin/?username=adhamaa&repo=github-readme-stats" />
-</a>
-<a href="https://github.com/adhamaa/adhamaa">
-  <img align="center" src="https://github-readme-stats-six-pied.vercel.app/api/pin/?username=adhamaa&repo=convoychat" />
-</a> -->
 
 [website]: https://example.com
 [twitter]: https://twitter.com/adhamakmal
