@@ -1,0 +1,76 @@
+import { ArrowUpRight } from "lucide-react";
+
+import { Reveal } from "@/components/site/reveal";
+import { CopyEmail } from "@/components/site/copy-email";
+import { iconMap } from "@/components/site/icons";
+import { profile, socials } from "@/data/profile";
+
+export function ContactSection() {
+  return (
+    <section
+      id="contact"
+      className="relative scroll-mt-24 overflow-hidden border-t border-border/70 py-20 sm:py-28"
+    >
+      <div
+        aria-hidden
+        className="dotted pointer-events-none absolute inset-0 -z-10 opacity-60 [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000,transparent)]"
+      />
+
+      <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
+        <Reveal>
+          <div className="flex items-baseline gap-4">
+            <span className="font-mono text-xs text-brand">04</span>
+            <span className="label">Contact</span>
+          </div>
+          <h2 className="mt-6 max-w-2xl text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-5xl">
+            Got something worth building?
+          </h2>
+          <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground">
+            I read everything that lands in my inbox. Product work, a contract,
+            an open source idea, or a question about the code on this site —
+            all welcome.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <a
+              href={`mailto:${profile.email}`}
+              className="group inline-flex h-11 items-center gap-2 rounded-md bg-brand px-5 text-sm font-medium text-brand-foreground transition-opacity hover:opacity-90"
+            >
+              Email me
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </a>
+            <CopyEmail className="h-11" />
+          </div>
+        </Reveal>
+
+        <Reveal delay={120} className="lg:min-w-[18rem]">
+          <ul className="grid gap-px overflow-hidden rounded-lg border border-border/80 bg-border/60">
+            {socials
+              .filter((social) => social.icon !== "mail")
+              .map((social) => {
+                const Icon = iconMap[social.icon];
+                return (
+                  <li key={social.name} className="bg-background">
+                    <a
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between gap-6 px-5 py-4 transition-colors hover:bg-muted/40"
+                    >
+                      <span className="flex items-center gap-3">
+                        <Icon className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-brand" />
+                        <span className="text-sm">{social.name}</span>
+                      </span>
+                      <span className="font-mono text-xs text-muted-foreground">
+                        {social.handle}
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+          </ul>
+        </Reveal>
+      </div>
+    </section>
+  );
+}

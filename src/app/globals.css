@@ -1,76 +1,185 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 40 20% 99%;
+    --foreground: 240 10% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
- 
+    --card-foreground: 240 10% 8%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
- 
-    --primary: 240 5.9% 10%;
+    --popover-foreground: 240 10% 8%;
+
+    --primary: 240 10% 8%;
     --primary-foreground: 0 0% 98%;
- 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
- 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
- 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
- 
-    --destructive: 0 84.2% 60.2%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 8%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 42%;
+
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 10% 8%;
+
+    --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
- 
-    --radius: 0.5rem;
+    --border: 240 6% 89%;
+    --input: 240 6% 89%;
+    --ring: 158 70% 32%;
+
+    /* portfolio tokens */
+    --brand: 158 72% 30%;
+    --brand-foreground: 0 0% 100%;
+    --grid: 240 6% 88%;
+    --glow: 158 72% 40%;
+
+    --radius: 0.4rem;
   }
- 
+
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
- 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
- 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
- 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
- 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
- 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
- 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
- 
-    --destructive: 0 62.8% 30.6%;
+    --background: 240 8% 4%;
+    --foreground: 0 0% 96%;
+
+    --card: 240 7% 6%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 240 8% 5%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 0 0% 96%;
+    --primary-foreground: 240 8% 4%;
+
+    --secondary: 240 5% 11%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 240 5% 11%;
+    --muted-foreground: 240 5% 58%;
+
+    --accent: 240 5% 12%;
+    --accent-foreground: 0 0% 96%;
+
+    --destructive: 0 62% 45%;
     --destructive-foreground: 0 0% 98%;
- 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+
+    --border: 240 5% 14%;
+    --input: 240 5% 16%;
+    --ring: 156 74% 46%;
+
+    --brand: 156 74% 46%;
+    --brand-foreground: 240 8% 4%;
+    --grid: 240 6% 13%;
+    --glow: 156 74% 46%;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
   }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background-color: hsl(var(--brand) / 0.25);
+    color: hsl(var(--foreground));
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border: 3px solid hsl(var(--background));
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.6);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Blueprint grid used behind the page */
+  .grid-backdrop {
+    background-image: linear-gradient(
+        to right,
+        hsl(var(--grid)) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, hsl(var(--grid)) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 55% at 50% 0%, #000 20%, transparent 100%);
+    -webkit-mask-image: radial-gradient(
+      ellipse 80% 55% at 50% 0%,
+      #000 20%,
+      transparent 100%
+    );
+  }
+
+  /* Thin monospace label used for section metadata */
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground;
+  }
+
+  .link-underline {
+    @apply relative inline-flex items-center gap-1 text-foreground/80 transition-colors hover:text-foreground;
+    background-image: linear-gradient(hsl(var(--brand)), hsl(var(--brand)));
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.25s ease, color 0.2s ease;
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .dotted {
+    background-image: radial-gradient(
+      hsl(var(--grid)) 1px,
+      transparent 1px
+    );
+    background-size: 16px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }
