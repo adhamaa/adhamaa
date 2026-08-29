@@ -1,0 +1,63 @@
+name: Metrics
+
+# Renders profile dashboards as SVG and commits them into this repo, so the
+# images are served from GitHub itself. This is the replacement for
+# github-profile-trophy and github-readme-activity-graph, both of which are
+# dead third-party deployments returning HTTP 402.
+
+on:
+  schedule:
+    - cron: "15 18 * * *" # 02:15 GMT+8, daily
+  workflow_dispatch:
+  push:
+    branches: ["master"]
+
+concurrency:
+  group: metrics
+  cancel-in-progress: true
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # METRICS_TOKEN is a classic PAT with `public_repo` scope. It is optional:
+      # without it this falls back to GITHUB_TOKEN, which renders the base card
+      # but cannot read private contribution counts or cross-repo commit data.
+      - name: Overview
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          filename: assets/metrics.svg
+          user: ${{ github.repository_owner }}
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Asia/Kuala_Lumpur
+          config_display: large
+
+      - name: Languages
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          filename: assets/metrics-languages.svg
+          user: ${{ github.repository_owner }}
+          template: classic
+          base: ""
+          config_timezone: Asia/Kuala_Lumpur
+          plugin_languages: yes
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 8
+          plugin_languages_sections: most-used
+
+      - name: Activity calendar
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          filename: assets/metrics-calendar.svg
+          user: ${{ github.repository_owner }}
+          template: classic
+          base: ""
+          config_timezone: Asia/Kuala_Lumpur
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
