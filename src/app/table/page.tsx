@@ -91,7 +91,7 @@ export default function LabPage() {
       <div className="container py-16 sm:py-24">
         <header className="max-w-2xl">
           <span className="label">
-            <span className="text-brand">//</span> lab
+            <span className="text-brand">{"//"}</span> lab
           </span>
           <h1 className="mt-6 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
             Component lab

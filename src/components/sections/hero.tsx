@@ -174,7 +174,7 @@ export function Hero() {
             <pre className="overflow-x-auto py-4 font-mono text-[12.5px] sm:text-[13px]">
               <code>
                 <Line n={1}>
-                  <span className={token.comment}>// the short version</span>
+                  <span className={token.comment}>{"// the short version"}</span>
                 </Line>
                 <Line n={2}>
                   <span className={token.keyword}>const</span>{" "}
@@ -250,7 +250,7 @@ export function Hero() {
                 <Line n={10} />
                 <Line n={11}>
                   <span className={token.comment}>
-                    // press ⌘K to look around
+                    {"// press ⌘K to look around"}
                   </span>
                 </Line>
               </code>
