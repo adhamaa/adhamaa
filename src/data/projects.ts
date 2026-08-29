@@ -22,13 +22,13 @@ export const projects: Project[] = [
   {
     id: "01",
     name: "Sharah CMpro",
-    kicker: "Accounting platform with HR built in, for a Malaysian business",
+    kicker: "Accounting platform with HR built in — an independent product of mine",
     problem:
       "Finance and people data lived in separate tools, so the same employee, the same month and the same ringgit had to be entered twice — and reconciled by hand whenever the two disagreed.",
     build:
       "A single admin console where accounting and HR share one database and one permission model. I designed the schema, wrote the API, built every screen, and shipped it to the edge — solo, end to end.",
     role: "Solo — schema, API, UI, deploy",
-    year: "2024 — present",
+    year: "2026 — present",
     stack: ["Vite", "React", "TypeScript", "Hono", "Cloudflare", "Neon Postgres"],
     highlights: [
       "Serverless Postgres on Neon behind a Hono API running on Cloudflare Workers — no servers to patch, cold starts measured in milliseconds",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     build:
       "An app that carries a practitioner from intake to outcome: open a case for a patient, work through the consultation, and produce the resulting remedy set — with the whole history kept queryable for the next visit.",
     role: "Solo — schema, API, UI, deploy",
-    year: "2024 — present",
+    year: "2026 — present",
     stack: ["Next.js", "React", "TypeScript", "Hono", "Cloudflare", "Neon Postgres"],
     highlights: [
       "A multi-step consultation flow modelled as explicit state, so a half-finished case is always resumable",
@@ -60,17 +60,18 @@ export const projects: Project[] = [
   {
     id: "03",
     name: "QHP Certificate Registry",
-    kicker: "Certificate issuing and verification for a training programme",
+    kicker: "Certificate issuing and verification — an Excel system of mine, rebuilt as a web app",
     problem:
-      "Certificates issued as one-off files are unverifiable after the fact: no canonical record, no way for a third party to confirm a certificate is genuine, and manual work every time one is reissued.",
+      "I originally built this as a spreadsheet during my freelance years — I designed the logo, the certificate template and the issuing logic behind it. It worked, but a spreadsheet cannot be verified by a third party, cannot be shared safely, and needed manual work every time a certificate was reissued.",
     build:
-      "A registry that generates certificates from programme records and keeps every issued certificate as a lookup-able entry, so verification is a query rather than a phone call.",
-    role: "Solo — schema, API, UI, deploy",
-    year: "2024",
-    stack: ["Next.js", "React", "TypeScript", "Hono", "Cloudflare", "Neon Postgres"],
+      "The same system rebuilt as a real product: a registry that generates certificates from programme records and keeps every issued one as a lookup-able entry, so verification is a query rather than a phone call. Same logic I designed in Excel, now with a schema, an API and an audit trail behind it.",
+    role: "Solo — logic, brand, schema, API, UI, deploy",
+    year: "2026 (from a 2020 original)",
+    stack: ["Vite", "React", "TypeScript", "Hono", "Cloudflare", "Neon Postgres"],
     highlights: [
+      "Carried my own domain logic across a full platform migration — spreadsheet to Postgres — without losing the rules that made the original work",
+      "Certificate template and logo are mine too, so the generated output matches the brand exactly",
       "Generation and registry share one source of truth, so an issued certificate can always be traced back to its record",
-      "Built on the same edge stack as the clinic app — one deployment story across the portfolio",
     ],
     live: "https://qhp-web.qahwah.my/",
     status: "active",

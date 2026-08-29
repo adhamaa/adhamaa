@@ -14,7 +14,7 @@ export type Role = {
 export const experience: Role[] = [
   {
     id: "01",
-    title: "Application Engineer",
+    title: "Application Engineer / Full-Stack Engineer",
     company: "Shinkels Technik Sdn Bhd",
     location: "Johor Bahru, Malaysia",
     period: "Jul 2022 — Present",
@@ -27,6 +27,7 @@ export const experience: Role[] = [
       "Built Python Flask APIs for services better suited to the Python ecosystem, and kept their contracts consistent with the Node side.",
       "Owned application state strategy (Redux, Context API, React Router) for maintainable single-page apps that stay fast as they grow.",
       "Ran CI/CD and release operations (Git, PM2, Docker, Linux) so deployments are routine rather than events.",
+      "Adopted AI pair-programming into the daily workflow without leaning on it — generated code is a first draft that I read line by line, correct to our standards and optimise before it ever reaches review.",
       "Set coding standards, led code reviews and mentored junior developers.",
     ],
     stack: [
@@ -70,6 +71,7 @@ export const experience: Role[] = [
       "Designed and shipped marketing sites and storefronts end to end, from Figma and Adobe XD mockups to a live domain.",
       "Built static sites with Gatsby and Jekyll, and content-managed sites on headless CMSs including Strapi, Netlify CMS and headless WordPress.",
       "Set up e-commerce on Shopify and EasyStore, including theme work in Liquid.",
+      "Designed and built the original certificate issuing system for a training programme in Excel — logo, certificate template and the issuing logic — which I later rebuilt as the QHP web registry.",
       "Handled the client relationship directly — scope, expectations, revisions and handover.",
     ],
     stack: ["React", "Gatsby", "JavaScript", "HTML", "CSS", "Shopify", "Strapi"],

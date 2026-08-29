@@ -13,7 +13,7 @@ export const profile = {
   timezone: "GMT+8",
   available: true,
   availableLabel: "Open to full-time & contract",
-  email: "adhamaa92@gmail.com",
+  email: "adham_92@live.com",
   phone: "+60 12-298 7734",
   siteUrl: "https://adhamaa.github.io",
   resumeUrl: "/Adham_Akmal_Azmi_Resume.pdf",
@@ -29,7 +29,7 @@ export const profile = {
   ],
 
   bio: [
-    "I'm a full-stack engineer based in Malaysia, five years into building software that companies actually run on. My recent work is an accounting and HR platform, a clinic case-management app and a certificate registry — all live, all built by me from the schema up to the last piece of UI.",
+    "I'm a full-stack engineer based in Malaysia, five years into building software that companies actually run on. Three of those systems are my own products — an accounting and HR platform, a clinic case-management app and a certificate registry — all live, all built by me from the schema up to the last piece of UI.",
     "The through-line is ownership. I'm comfortable designing a Postgres schema in the morning, writing the Hono API against it at lunch, and shipping the React screens that consume it before the day is out — then owning the deploy, the bugs, and the next iteration. Day to day I lead frontend architecture at Shinkels Technik, write REST and GraphQL services in Node and Python, and review the team's code.",
   ],
 
@@ -40,6 +40,7 @@ export const profile = {
     "REST & GraphQL API design, auth and role-based access",
     "Edge deployment: Cloudflare Workers, serverless Postgres",
     "Design-system frontends in React, Next.js and TypeScript",
+    "AI-assisted delivery — faster drafts, reviewed and hardened by hand",
     "Taking an ambiguous brief to a shipped v1, solo",
   ],
 
@@ -55,6 +56,10 @@ export const profile = {
       body: "Schema, API, interface, deploy. Nothing gets thrown over a wall, and nothing waits on someone else's half of the feature.",
     },
     {
+      title: "AI is a tool, not an author",
+      body: "I pair with AI daily — it makes the first draft fast. Nothing ships unread: I review every line, refactor it to the standard the codebase already holds, and optimise what it got lazily right.",
+    },
+    {
       title: "Ship small, ship often",
       body: "Short-lived branches, reversible changes, and a deploy pipeline boring enough to trust on a Friday afternoon.",
     },
@@ -65,6 +70,10 @@ export const profile = {
     {
       title: "Built for the person using it",
       body: "Accounting clerks and clinicians don't read release notes. Semantic HTML, real focus states, fast pages on mid-range hardware.",
+    },
+    {
+      title: "Measure before optimising",
+      body: "Bundle budgets, real device timings and a profiler beat opinions about what feels slow.",
     },
   ],
 } as const;

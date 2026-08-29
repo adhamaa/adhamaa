@@ -8,7 +8,7 @@ export function ApproachSection() {
       id="approach"
       index="04"
       title="How I work"
-      description="Four things I hold to, and what currently has my attention."
+      description="The habits behind the work, and what currently has my attention."
     >
       <div className="grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:gap-16">
         <ol className="grid gap-px overflow-hidden rounded-lg border border-border/80 bg-border/60 sm:grid-cols-2">

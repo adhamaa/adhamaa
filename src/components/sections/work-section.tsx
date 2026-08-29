@@ -68,7 +68,7 @@ export function WorkSection() {
       id="work"
       index="01"
       title="Selected work"
-      description="Three of these are live systems people use to run a business or see patients. All three were built solo — schema to interface to deploy."
+      description="Independent products of mine — not my employer's. Live systems people use to run a business and see patients, each built solo from schema to interface to deploy."
     >
       <ul className="border-t border-border/70">
         {projects.map((project, index) => (

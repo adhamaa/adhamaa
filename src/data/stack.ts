@@ -60,6 +60,7 @@ export const stack: StackGroup[] = [
       "GitHub Actions",
       "PM2",
       "Git",
+      "AI pair programming",
       "Postman",
       "Figma",
     ],
