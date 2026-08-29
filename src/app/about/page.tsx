@@ -33,7 +33,7 @@ export default function About() {
       <div className="container py-16 sm:py-24">
         <Reveal className="max-w-3xl">
           <span className="label">
-            <span className="text-brand">//</span> about
+            <span className="text-brand">{"//"}</span> about
           </span>
           <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
             Assalamualaykum — I&apos;m Adham
