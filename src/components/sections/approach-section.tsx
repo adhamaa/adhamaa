@@ -6,7 +6,7 @@ export function ApproachSection() {
   return (
     <Section
       id="approach"
-      index="03"
+      index="04"
       title="How I work"
       description="Four things I hold to, and what currently has my attention."
     >

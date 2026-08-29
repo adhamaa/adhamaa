@@ -1,6 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Download } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { profile, socials } from "@/data/profile";
@@ -47,7 +47,7 @@ export function Hero() {
         className="pointer-events-none absolute left-1/2 top-[-18rem] -z-10 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-brand/10 blur-[120px]"
       />
 
-      <div className="container grid items-center gap-16 pb-16 pt-16 sm:pt-24 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:pb-24">
+      <div className="container grid items-center gap-16 pb-16 pt-16 sm:pt-24 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:pb-20">
         <div className="max-w-2xl">
           <Reveal className="mb-8 flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/60 px-3 py-1 font-mono text-[11px] text-muted-foreground">
@@ -81,7 +81,7 @@ export function Hero() {
               <span className="text-brand">$</span>
               <span>{profile.role.toLowerCase()}</span>
               <span className="text-muted-foreground/40">—</span>
-              <span>{profile.focus.toLowerCase()}</span>
+              <span>5+ years shipping</span>
               <span className="inline-block h-4 w-[7px] animate-blink bg-brand align-middle" />
             </p>
           </Reveal>
@@ -98,21 +98,45 @@ export function Hero() {
                 href={`mailto:${profile.email}`}
                 className="group inline-flex h-11 items-center gap-2 rounded-md bg-brand px-5 text-sm font-medium text-brand-foreground transition-opacity hover:opacity-90"
               >
-                Start a conversation
+                Hire me
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </a>
+              <a
+                href={profile.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex h-11 items-center gap-2 rounded-md border border-border px-5 text-sm font-medium transition-colors hover:border-brand/50 hover:bg-muted/50"
+              >
+                <Download className="h-4 w-4" />
+                Résumé
               </a>
               <Link
                 href="/#work"
-                className="group inline-flex h-11 items-center gap-2 rounded-md border border-border px-5 text-sm font-medium transition-colors hover:border-brand/50 hover:bg-muted/50"
+                className="group inline-flex h-11 items-center gap-2 px-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
-                Selected work
+                See the work
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
           </Reveal>
 
           <Reveal delay={300}>
-            <ul className="mt-10 flex items-center gap-5">
+            <dl className="mt-12 grid max-w-lg grid-cols-3 gap-px overflow-hidden rounded-lg border border-border/80 bg-border/60">
+              {profile.stats.map((stat) => (
+                <div key={stat.label} className="bg-background px-4 py-4">
+                  <dt className="font-mono text-xl font-medium text-brand sm:text-2xl">
+                    {stat.value}
+                  </dt>
+                  <dd className="mt-1.5 text-[11px] leading-snug text-muted-foreground">
+                    {stat.label}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
+
+          <Reveal delay={340}>
+            <ul className="mt-8 flex items-center gap-5">
               {socials.map((social) => {
                 const Icon = iconMap[social.icon];
                 return (
@@ -166,7 +190,7 @@ export function Hero() {
                 </Line>
                 <Line n={4}>
                   {"  "}
-                  <span className={token.prop}>stack</span>
+                  <span className={token.prop}>frontend</span>
                   <span className={token.punct}>: [</span>
                   <Str>TypeScript</Str>
                   <span className={token.punct}>, </span>
@@ -177,23 +201,38 @@ export function Hero() {
                 </Line>
                 <Line n={5}>
                   {"  "}
-                  <span className={token.prop}>caresAbout</span>
+                  <span className={token.prop}>backend</span>
                   <span className={token.punct}>: [</span>
-                  <Str>DX</Str>
+                  <Str>Hono</Str>
                   <span className={token.punct}>, </span>
-                  <Str>a11y</Str>
+                  <Str>Express</Str>
                   <span className={token.punct}>, </span>
-                  <Str>performance</Str>
+                  <Str>GraphQL</Str>
+                  <span className={token.punct}>, </span>
+                  <Str>Flask</Str>
                   <span className={token.punct}>],</span>
                 </Line>
                 <Line n={6}>
                   {"  "}
-                  <span className={token.prop}>location</span>
-                  <span className={token.punct}>: </span>
-                  <Str>{profile.location}</Str>
-                  <span className={token.punct}>,</span>
+                  <span className={token.prop}>owns</span>
+                  <span className={token.punct}>: [</span>
+                  <Str>schema</Str>
+                  <span className={token.punct}>, </span>
+                  <Str>api</Str>
+                  <span className={token.punct}>, </span>
+                  <Str>ui</Str>
+                  <span className={token.punct}>, </span>
+                  <Str>deploy</Str>
+                  <span className={token.punct}>],</span>
                 </Line>
                 <Line n={7}>
+                  {"  "}
+                  <span className={token.prop}>runsOn</span>
+                  <span className={token.punct}>: </span>
+                  <Str>Cloudflare + Neon Postgres</Str>
+                  <span className={token.punct}>,</span>
+                </Line>
+                <Line n={8}>
                   {"  "}
                   <span className={token.prop}>available</span>
                   <span className={token.punct}>: </span>
@@ -202,14 +241,14 @@ export function Hero() {
                   </span>
                   <span className={token.punct}>,</span>
                 </Line>
-                <Line n={8}>
+                <Line n={9}>
                   <span className={token.punct}>{"}"} </span>
                   <span className={token.keyword}>satisfies</span>{" "}
                   <span className={token.name}>Engineer</span>
                   <span className={token.punct}>;</span>
                 </Line>
-                <Line n={9} />
-                <Line n={10}>
+                <Line n={10} />
+                <Line n={11}>
                   <span className={token.comment}>
                     // press ⌘K to look around
                   </span>

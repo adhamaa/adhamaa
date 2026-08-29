@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Check, Download } from "lucide-react";
 
 import { profile, socials } from "@/data/profile";
 import { stack } from "@/data/stack";
+import { education, languages } from "@/data/experience";
 import { Reveal } from "@/components/site/reveal";
 import { iconMap } from "@/components/site/icons";
 
@@ -10,13 +11,14 @@ const facts = [
   { key: "name", value: profile.name },
   { key: "role", value: profile.role },
   { key: "based", value: `${profile.location} (${profile.timezone})` },
-  { key: "focus", value: profile.focus },
+  { key: "experience", value: "5+ years" },
   { key: "status", value: profile.availableLabel },
+  { key: "languages", value: languages.join(", ") },
 ];
 
 const offTheClock = [
-  "Memorising and revising the Qur'an.",
-  "Gaming — the competitive kind, and the long story kind.",
+  "Memorising and revising the Qur'an — I hold a Diploma in Quran wal Qiraat.",
+  "Gaming, the competitive kind and the long-story kind.",
   "Reading other people's source code to steal the good ideas.",
 ];
 
@@ -58,15 +60,34 @@ export default function About() {
             <Reveal className="space-y-6">
               <h2 className="flex items-baseline gap-3 text-xl font-medium tracking-tight">
                 <span className="font-mono text-xs text-brand">01</span>
-                What I actually do
+                What I can take on
               </h2>
               <p className="text-pretty leading-[1.8] text-muted-foreground">
-                Most of my work sits between design and infrastructure: turning
-                a Figma file into a component library that survives contact with
-                real data, wiring it to an API without leaking loading states
-                everywhere, and keeping the bundle small enough that the whole
-                thing still opens fast on a mid-range phone.
+                My last three builds were the same shape: a business had a
+                process running on spreadsheets, paper or two systems that
+                didn&apos;t talk, and needed one application that did. I took
+                each from an ambiguous brief to a live product on my own —
+                database design, API, interface, deployment and the support
+                afterwards.
               </p>
+              <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
+                {profile.capabilities.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2.5 text-sm leading-relaxed text-muted-foreground"
+                  >
+                    <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand" />
+                    <span className="text-pretty">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+            <Reveal className="space-y-6">
+              <h2 className="flex items-baseline gap-3 text-xl font-medium tracking-tight">
+                <span className="font-mono text-xs text-brand">02</span>
+                The toolkit
+              </h2>
               <div className="grid gap-px overflow-hidden rounded-lg border border-border/80 bg-border/60 sm:grid-cols-2">
                 {stack.map((group) => (
                   <div key={group.id} className="bg-background p-5">
@@ -86,7 +107,32 @@ export default function About() {
 
             <Reveal className="space-y-6">
               <h2 className="flex items-baseline gap-3 text-xl font-medium tracking-tight">
-                <span className="font-mono text-xs text-brand">02</span>
+                <span className="font-mono text-xs text-brand">03</span>
+                Education & certification
+              </h2>
+              <ul className="divide-y divide-border/70 overflow-hidden rounded-lg border border-border/80">
+                {education.map((item) => (
+                  <li
+                    key={item.title}
+                    className="flex flex-col gap-1 px-5 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
+                  >
+                    <div>
+                      <p className="text-sm">{item.title}</p>
+                      <p className="mt-0.5 font-mono text-[11px] text-muted-foreground">
+                        {item.org}
+                      </p>
+                    </div>
+                    <span className="shrink-0 font-mono text-[11px] text-muted-foreground/70">
+                      {item.year}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+            <Reveal className="space-y-6">
+              <h2 className="flex items-baseline gap-3 text-xl font-medium tracking-tight">
+                <span className="font-mono text-xs text-brand">04</span>
                 Currently
               </h2>
               <ul className="space-y-3">
@@ -104,7 +150,7 @@ export default function About() {
 
             <Reveal className="space-y-6">
               <h2 className="flex items-baseline gap-3 text-xl font-medium tracking-tight">
-                <span className="font-mono text-xs text-brand">03</span>
+                <span className="font-mono text-xs text-brand">05</span>
                 Off the clock
               </h2>
               <ul className="space-y-3">
@@ -123,7 +169,7 @@ export default function About() {
             <Reveal>
               <div className="flex flex-wrap items-center gap-3 rounded-lg border border-border/80 p-6">
                 <p className="mr-auto text-sm text-muted-foreground">
-                  Want the short version, or the code?
+                  Want the systems I&apos;ve shipped, or the one-page version?
                 </p>
                 <Link
                   href="/#work"
@@ -132,11 +178,13 @@ export default function About() {
                   See the work
                 </Link>
                 <a
-                  href={`mailto:${profile.email}`}
+                  href={profile.resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex h-10 items-center gap-2 rounded-md bg-brand px-4 text-sm font-medium text-brand-foreground transition-opacity hover:opacity-90"
                 >
-                  Say hello
-                  <ArrowUpRight className="h-4 w-4" />
+                  <Download className="h-4 w-4" />
+                  Résumé
                 </a>
               </div>
             </Reveal>
@@ -158,6 +206,14 @@ export default function About() {
                   </div>
                 ))}
               </dl>
+
+              <a
+                href={`mailto:${profile.email}`}
+                className="mt-4 flex h-10 items-center justify-center gap-2 rounded-md bg-brand text-sm font-medium text-brand-foreground transition-opacity hover:opacity-90"
+              >
+                Hire me
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
 
               <ul className="mt-4 flex flex-wrap gap-3">
                 {socials.map((social) => {

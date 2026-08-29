@@ -7,42 +7,64 @@ export const profile = {
   name: "Adham Akmal Azmi",
   shortName: "Adham AA",
   handle: "adhamaa",
-  // VERIFY: role/location/status are the only "claims" on the site — tune them.
-  role: "Frontend Engineer",
-  focus: "React · Next.js · TypeScript",
-  location: "Malaysia",
+  role: "Full-Stack Engineer",
+  focus: "React · Next.js · Hono · Node.js · Python",
+  location: "Pahang, Malaysia",
   timezone: "GMT+8",
   available: true,
-  availableLabel: "Open to new work",
+  availableLabel: "Open to full-time & contract",
   email: "adhamaa92@gmail.com",
+  phone: "+60 12-298 7734",
   siteUrl: "https://adhamaa.github.io",
+  resumeUrl: "/Adham_Akmal_Azmi_Resume.pdf",
+
   tagline:
-    "I build fast, accessible interfaces for the web — typed end to end, tested where it counts, and shipped continuously.",
+    "I ship business software end to end — the interface, the API behind it, and the edge infrastructure it runs on. Three production platforms, all built solo.",
+
+  /** Three facts, above the fold, that answer \"why you\". */
+  stats: [
+    { value: "5+", label: "Years shipping production software" },
+    { value: "3", label: "Platforms built solo, schema to deploy" },
+    { value: "2022→", label: "Leading frontend at Shinkels Technik" },
+  ],
+
   bio: [
-    "I'm a web engineer who likes the boring parts: predictable state, honest types, small components that stay small. Most of my time goes into React and Next.js apps — design systems, data-heavy dashboards, and the glue that makes them feel instant.",
-    "Outside of product work I read source code for fun, keep a running list of things I don't understand yet, and try to leave every codebase I touch a little easier for the next person.",
+    "I'm a full-stack engineer based in Malaysia, five years into building software that companies actually run on. My recent work is an accounting and HR platform, a clinic case-management app and a certificate registry — all live, all built by me from the schema up to the last piece of UI.",
+    "The through-line is ownership. I'm comfortable designing a Postgres schema in the morning, writing the Hono API against it at lunch, and shipping the React screens that consume it before the day is out — then owning the deploy, the bugs, and the next iteration. Day to day I lead frontend architecture at Shinkels Technik, write REST and GraphQL services in Node and Python, and review the team's code.",
   ],
+
+  /** What a client or hiring manager can hand me on day one. */
+  capabilities: [
+    "Internal tools, admin consoles and dashboards",
+    "Business platforms — accounting, HR, operations, CRM",
+    "REST & GraphQL API design, auth and role-based access",
+    "Edge deployment: Cloudflare Workers, serverless Postgres",
+    "Design-system frontends in React, Next.js and TypeScript",
+    "Taking an ambiguous brief to a shipped v1, solo",
+  ],
+
   now: [
-    "Digging into data scraping and API design.",
-    "Contributing to open source — especially Islamic open source projects.",
-    "Sharpening TypeScript, accessibility, and rendering performance.",
+    "Building on the edge — Hono on Cloudflare Workers with Neon Postgres.",
+    "Deepening Python API work: Flask services and data pipelines.",
+    "Contributing to open source, especially Islamic open source projects.",
   ],
+
   principles: [
+    {
+      title: "I own the whole slice",
+      body: "Schema, API, interface, deploy. Nothing gets thrown over a wall, and nothing waits on someone else's half of the feature.",
+    },
+    {
+      title: "Ship small, ship often",
+      body: "Short-lived branches, reversible changes, and a deploy pipeline boring enough to trust on a Friday afternoon.",
+    },
     {
       title: "Types are documentation",
       body: "If the compiler can catch it, a reviewer shouldn't have to. Model the domain first, wire the UI second.",
     },
     {
-      title: "Ship small, ship often",
-      body: "Short-lived branches, reversible changes, and a deploy pipeline boring enough to trust on a Friday.",
-    },
-    {
-      title: "Accessible by default",
-      body: "Semantic HTML, real focus states, and keyboard paths that work — not an audit item bolted on at the end.",
-    },
-    {
-      title: "Measure before optimising",
-      body: "Bundle budgets, Core Web Vitals, and a profiler beat opinions about what feels slow.",
+      title: "Built for the person using it",
+      body: "Accounting clerks and clinicians don't read release notes. Semantic HTML, real focus states, fast pages on mid-range hardware.",
     },
   ],
 } as const;
@@ -74,12 +96,6 @@ export const socials: SocialLink[] = [
     icon: "x",
   },
   {
-    name: "Instagram",
-    handle: "@adhamaa",
-    href: "https://instagram.com/adhamaa",
-    icon: "instagram",
-  },
-  {
     name: "Email",
     handle: profile.email,
     href: `mailto:${profile.email}`,
@@ -94,7 +110,8 @@ export const navLinks = [
 ] as const;
 
 export const sectionLinks = [
-  { label: "Stack", href: "/#stack" },
   { label: "Work", href: "/#work" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Stack", href: "/#stack" },
   { label: "Contact", href: "/#contact" },
 ] as const;

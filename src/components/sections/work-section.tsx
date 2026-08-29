@@ -13,13 +13,62 @@ const statusStyles: Record<Project["status"], string> = {
   archived: "border-border/60 text-muted-foreground/60",
 };
 
+function ProjectLinks({ project }: { project: Project }) {
+  const linkClass =
+    "inline-flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground";
+
+  return (
+    <div className="flex flex-row items-start gap-4 md:flex-col md:items-end md:gap-3">
+      <span
+        className={cn(
+          "rounded-full border px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em]",
+          statusStyles[project.status]
+        )}
+      >
+        {project.status}
+      </span>
+
+      {project.live ? (
+        project.live.startsWith("/") ? (
+          <Link href={project.live} className={linkClass}>
+            visit
+            <ArrowUpRight className="h-3.5 w-3.5" />
+          </Link>
+        ) : (
+          <a
+            href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+          >
+            visit
+            <ArrowUpRight className="h-3.5 w-3.5" />
+          </a>
+        )
+      ) : null}
+
+      {project.repo ? (
+        <a
+          href={project.repo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={linkClass}
+        >
+          <GitHubIcon className="h-3.5 w-3.5" />
+          source
+        </a>
+      ) : null}
+    </div>
+  );
+}
+
 export function WorkSection() {
   return (
     <Section
       id="work"
-      index="02"
+      index="01"
       title="Selected work"
-      description="A short list, kept honest. Each one links to the source or the running thing."
+      description="Three of these are live systems people use to run a business or see patients. All three were built solo — schema to interface to deploy."
     >
       <ul className="border-t border-border/70">
         {projects.map((project, index) => (
@@ -29,78 +78,63 @@ export function WorkSection() {
             delay={index * 80}
             className="group border-b border-border/70"
           >
-            <div className="grid gap-6 py-8 transition-colors md:grid-cols-[5rem_1fr_11rem] md:gap-10 md:group-hover:bg-muted/30">
+            <div className="grid gap-6 py-10 transition-colors md:grid-cols-[5rem_1fr_9rem] md:gap-10 md:group-hover:bg-muted/20">
               <div className="flex items-center gap-3 font-mono text-xs md:flex-col md:items-start md:gap-1">
                 <span className="text-brand">{project.id}</span>
                 <span className="text-muted-foreground/60">{project.year}</span>
               </div>
 
-              <div className="min-w-0">
+              <div className="min-w-0 max-w-2xl">
                 <h3 className="text-xl font-medium tracking-tight transition-colors group-hover:text-brand sm:text-2xl">
                   {project.name}
                 </h3>
-                <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground/70">
-                  {project.role}
+                <p className="mt-1.5 text-sm text-muted-foreground">
+                  {project.kicker}
                 </p>
-                <p className="mt-4 max-w-2xl text-pretty text-sm leading-relaxed text-muted-foreground">
-                  {project.summary}
-                </p>
-                <ul className="mt-5 flex flex-wrap gap-2">
-                  {project.stack.map((tech) => (
+
+                <dl className="mt-6 space-y-4">
+                  <div>
+                    <dt className="label mb-1.5">The problem</dt>
+                    <dd className="text-pretty text-sm leading-relaxed text-muted-foreground">
+                      {project.problem}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="label mb-1.5">What I built</dt>
+                    <dd className="text-pretty text-sm leading-relaxed text-muted-foreground">
+                      {project.build}
+                    </dd>
+                  </div>
+                </dl>
+
+                <ul className="mt-5 space-y-2">
+                  {project.highlights.map((highlight) => (
                     <li
+                      key={highlight}
+                      className="flex gap-2.5 text-sm leading-relaxed text-muted-foreground/90"
+                    >
+                      <span className="mt-[9px] h-px w-3 shrink-0 bg-brand/60" />
+                      <span className="text-pretty">{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-6 flex flex-wrap items-center gap-2">
+                  <span className="mr-1 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground/60">
+                    {project.role}
+                  </span>
+                  {project.stack.map((tech) => (
+                    <span
                       key={tech}
                       className="rounded border border-border/80 px-2 py-0.5 font-mono text-[11px] text-muted-foreground"
                     >
                       {tech}
-                    </li>
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
 
-              <div className="flex flex-row items-start gap-4 md:flex-col md:items-end md:gap-3">
-                <span
-                  className={cn(
-                    "rounded-full border px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em]",
-                    statusStyles[project.status]
-                  )}
-                >
-                  {project.status}
-                </span>
-
-                {project.live ? (
-                  project.live.startsWith("/") ? (
-                    <Link
-                      href={project.live}
-                      className="inline-flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      visit
-                      <ArrowUpRight className="h-3.5 w-3.5" />
-                    </Link>
-                  ) : (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      visit
-                      <ArrowUpRight className="h-3.5 w-3.5" />
-                    </a>
-                  )
-                ) : null}
-
-                {project.repo ? (
-                  <a
-                    href={project.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    <GitHubIcon className="h-3.5 w-3.5" />
-                    source
-                  </a>
-                ) : null}
-              </div>
+              <ProjectLinks project={project} />
             </div>
           </Reveal>
         ))}

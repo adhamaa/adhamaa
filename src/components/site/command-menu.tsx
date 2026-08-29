@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import {
   ArrowUpRight,
   Clipboard,
+  Download,
   Home,
   Laptop,
   Moon,
@@ -86,8 +87,10 @@ export function CommandMenu() {
 
         <CommandGroup heading="Jump to">
           {[
-            { label: "Stack", href: "/#stack" },
             { label: "Selected work", href: "/#work" },
+            { label: "Experience", href: "/#experience" },
+            { label: "Stack", href: "/#stack" },
+            { label: "How I work", href: "/#approach" },
             { label: "Contact", href: "/#contact" },
           ].map((item) => (
             <CommandItem
@@ -123,6 +126,16 @@ export function CommandMenu() {
         <CommandSeparator />
 
         <CommandGroup heading="Actions">
+          <CommandItem
+            onSelect={() =>
+              run(() =>
+                window.open(profile.resumeUrl, "_blank", "noopener,noreferrer")
+              )
+            }
+          >
+            <Download className="mr-2 h-4 w-4" />
+            Download résumé
+          </CommandItem>
           <CommandItem
             onSelect={() =>
               run(() => {

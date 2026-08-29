@@ -6,9 +6,9 @@ export function StackSection() {
   return (
     <Section
       id="stack"
-      index="01"
+      index="03"
       title="Stack"
-      description="Tools I've spent real hours in — not a checklist of everything I've read the docs for."
+      description="The tools behind the systems above — not a checklist of everything I have read the docs for."
     >
       <div className="grid gap-px overflow-hidden rounded-lg border border-border/80 bg-border/60 sm:grid-cols-2 lg:grid-cols-4">
         {stack.map((group, index) => (

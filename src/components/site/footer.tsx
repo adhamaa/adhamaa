@@ -55,6 +55,14 @@ export function Footer() {
               /lab
             </Link>
             <a
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground"
+            >
+              résumé
+            </a>
+            <a
               href="https://github.com/adhamaa/adhamaa"
               target="_blank"
               rel="noopener noreferrer"

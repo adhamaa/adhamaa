@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Check, Download } from "lucide-react";
 
 import { Reveal } from "@/components/site/reveal";
 import { CopyEmail } from "@/components/site/copy-email";
@@ -16,19 +16,21 @@ export function ContactSection() {
         className="dotted pointer-events-none absolute inset-0 -z-10 opacity-60 [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000,transparent)]"
       />
 
-      <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
+      <div className="flex items-baseline gap-4">
+        <span className="font-mono text-xs text-brand">05</span>
+        <span className="label">Contact</span>
+      </div>
+
+      <div className="mt-6 grid gap-12 lg:grid-cols-[1fr_auto] lg:items-start lg:gap-16">
         <Reveal>
-          <div className="flex items-baseline gap-4">
-            <span className="font-mono text-xs text-brand">04</span>
-            <span className="label">Contact</span>
-          </div>
-          <h2 className="mt-6 max-w-2xl text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-5xl">
-            Got something worth building?
+          <h2 className="max-w-2xl text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-5xl">
+            Hiring, or need something built?
           </h2>
           <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground">
-            I read everything that lands in my inbox. Product work, a contract,
-            an open source idea, or a question about the code on this site —
-            all welcome.
+            I&apos;m open to full-time roles and contract work, remote or in
+            Malaysia. Tell me what you&apos;re trying to ship and I&apos;ll tell
+            you honestly whether I&apos;m the right person for it — usually
+            within a day.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -40,6 +42,30 @@ export function ContactSection() {
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
             <CopyEmail className="h-11" />
+            <a
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-11 items-center gap-2 rounded-md border border-border/80 px-4 font-mono text-xs text-muted-foreground transition-colors hover:border-brand/50 hover:text-foreground"
+            >
+              <Download className="h-3.5 w-3.5" />
+              résumé.pdf
+            </a>
+          </div>
+
+          <div className="mt-10">
+            <span className="label">What I can take off your plate</span>
+            <ul className="mt-4 grid max-w-2xl gap-x-8 gap-y-2.5 sm:grid-cols-2">
+              {profile.capabilities.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2.5 text-sm leading-relaxed text-muted-foreground"
+                >
+                  <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand" />
+                  <span className="text-pretty">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </Reveal>
 
@@ -68,6 +94,12 @@ export function ContactSection() {
                   </li>
                 );
               })}
+            <li className="bg-background px-5 py-4">
+              <span className="label">Based in</span>
+              <p className="mt-1.5 text-sm">
+                {profile.location} · {profile.timezone}
+              </p>
+            </li>
           </ul>
         </Reveal>
       </div>
