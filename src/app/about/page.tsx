@@ -1,279 +1,242 @@
-import { Button } from "@/components/ui/button";
-import * as React from "react";
+import Link from "next/link";
+import { ArrowUpRight, Check, Download } from "lucide-react";
 
-const stats = [
-  { label: "Business was founded", value: "2012" },
-  { label: "People on the team", value: "120+" },
-  { label: "Users on the platform", value: "250k" },
-  { label: "Paid out to creators", value: "$70M" },
-];
-const values = [
-  {
-    name: "Be world-class.",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
-    icon: "",
-  },
-  {
-    name: "Take responsibility.",
-    description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-    icon: "",
-  },
-  {
-    name: "Be supportive.",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus voluptas blanditiis et.",
-    icon: "",
-  },
-  {
-    name: "Always learning.",
-    description:
-      "Iure sed ab. Aperiam optio placeat dolor facere. Officiis pariatur eveniet atque et dolor.",
-    icon: "",
-  },
-  {
-    name: "Share everything you know.",
-    description:
-      "Laudantium tempora sint ut consectetur ratione. Ut illum ut rem numquam fuga delectus.",
-    icon: "",
-  },
-  {
-    name: "Enjoy downtime.",
-    description:
-      "Culpa dolorem voluptatem velit autem rerum qui et corrupti. Quibusdam quo placeat.",
-    icon: "",
-  },
-];
-const team = [
-  {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    location: "Toronto, Canada",
-  },
-  // More people...
-];
-const benefits = [
-  "Competitive salaries",
-  "Flexible work hours",
-  "30 days of paid vacation",
-  "Annual team retreats",
-  "Benefits for you and your family",
-  "A great work environment",
+import { profile, socials } from "@/data/profile";
+import { stack } from "@/data/stack";
+import { education, languages } from "@/data/experience";
+import { Reveal } from "@/components/site/reveal";
+import { iconMap } from "@/components/site/icons";
+
+const facts = [
+  { key: "name", value: profile.name },
+  { key: "role", value: profile.role },
+  { key: "based", value: `${profile.location} (${profile.timezone})` },
+  { key: "experience", value: "5+ years" },
+  { key: "status", value: profile.availableLabel },
+  { key: "languages", value: languages.join(", ") },
 ];
 
-function About() {
+const offTheClock = [
+  "Memorising and revising the Qur'an — I hold a Diploma in Quran wal Qiraat.",
+  "Gaming, the competitive kind and the long-story kind.",
+  "Reading other people's source code to steal the good ideas.",
+];
+
+export default function About() {
   return (
-    <main className="relative isolate">
-      {/* Background */}
+    <div className="relative">
       <div
-        className="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
-        aria-hidden="true"
-      >
-        <div
-          className="aspect-[1108/632] w-[69.25rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25"
-          style={{
-            clipPath:
-              "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-          }}
-        />
-      </div>
+        aria-hidden
+        className="grid-backdrop pointer-events-none absolute inset-x-0 top-0 -z-10 h-[28rem]"
+      />
 
-      {/* Header section */}
-      <div className="px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            We love creators
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat aliqua.
+      <div className="container py-16 sm:py-24">
+        <Reveal className="max-w-3xl">
+          <span className="label">
+            <span className="text-brand">//</span> about
+          </span>
+          <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
+            Assalamualaykum — I&apos;m Adham
+            <span className="text-brand">.</span>
+          </h1>
+          <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
+            {profile.tagline}
           </p>
-        </div>
-      </div>
+        </Reveal>
 
-      {/* Content section */}
-      <div className="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 lg:max-w-none lg:grid-cols-2">
-            <div>
-              <p>
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                Id dolor praesent donec est. Odio penatibus risus viverra tellus
-                varius sit neque erat velit. Faucibus commodo massa rhoncus,
-                volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
-              </p>
-              <p className="mt-8">
-                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
-                odio id et. Id blandit molestie auctor fermentum dignissim.
-                Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate
-                et ultrices hac adipiscing egestas.
-              </p>
-            </div>
-            <div>
-              <p>
-                Erat pellentesque dictumst ligula porttitor risus eget et eget.
-                Ultricies tellus felis id dignissim eget. Est augue maecenas
-                risus nulla ultrices congue nunc tortor. Enim et nesciunt
-                doloremque nesciunt voluptate.
-              </p>
-              <p className="mt-8">
-                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
-                odio id et. Id blandit molestie auctor fermentum dignissim.
-                Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate
-                et ultrices hac adipiscing egestas. Iaculis convallis ac tempor
-                et ut. Ac lorem vel integer orci.
-              </p>
-            </div>
-          </div>
-          <dl className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mt-28 lg:grid-cols-4">
-            {stats.map((stat, statIdx) => (
-              <div
-                key={statIdx}
-                className="flex flex-col-reverse gap-y-3 border-l border-white/20 pl-6"
-              >
-                <dt className="text-base leading-7 text-gray-300">
-                  {stat.label}
-                </dt>
-                <dd className="text-3xl font-semibold tracking-tight text-white">
-                  {stat.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </div>
+        <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_18rem] lg:gap-16">
+          <div className="order-2 space-y-16 lg:order-1">
+            <Reveal className="space-y-6">
+              {profile.bio.map((paragraph) => (
+                <p
+                  key={paragraph.slice(0, 24)}
+                  className="text-pretty text-base leading-[1.8] text-muted-foreground"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </Reveal>
 
-      {/* Image section */}
-      <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-        <img
-          src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2894&q=80"
-          alt=""
-          className="aspect-[9/4] w-full object-cover xl:rounded-3xl"
-        />
-      </div>
-
-      {/* Values section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Our values
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            impedit perferendis suscipit eaque, iste dolor cupiditate
-            blanditiis.
-          </p>
-        </div>
-        <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-16">
-          {values.map((value) => (
-            <div key={value.name} className="relative pl-9">
-              <dt className="inline font-semibold text-white">
-                <i
-                  className="absolute left-1 top-1 h-5 w-5 text-indigo-500"
-                  aria-hidden="true"
-                />
-                {value.name}
-              </dt>{" "}
-              <dd className="inline">{value.description}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-
-      {/* Team section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Our team
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Excepturi repudiandae alias ut. Totam aut facilis. Praesentium in
-            neque vel omnis. Eos error odio. Qui fugit voluptatibus eum culpa.
-          </p>
-        </div>
-        <ul
-          role="list"
-          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
-        >
-          {team.map((person) => (
-            <li key={person.name}>
-              <img
-                className="aspect-[14/13] w-full rounded-2xl object-cover"
-                src={person.imageUrl}
-                alt=""
-              />
-              <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">
-                {person.name}
-              </h3>
-              <p className="text-base leading-7 text-gray-300">{person.role}</p>
-              <p className="text-sm leading-6 text-gray-500">
-                {person.location}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* CTA section */}
-      <div className="relative isolate -z-10 mt-32 sm:mt-40">
-        <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
-            <img
-              className="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
-              src="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-              alt=""
-            />
-            <div className="w-full flex-auto">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Join our team
+            <Reveal className="space-y-6">
+              <h2 className="flex items-baseline gap-3 text-xl font-medium tracking-tight">
+                <span className="font-mono text-xs text-brand">01</span>
+                What I can take on
               </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
-                Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-                magnam voluptatum cupiditate veritatis in accusamus quisquam.
+              <p className="text-pretty leading-[1.8] text-muted-foreground">
+                My last three builds were the same shape: a business had a
+                process running on spreadsheets, paper or two systems that
+                didn&apos;t talk, and needed one application that did. I took
+                each from an ambiguous brief to a live product on my own —
+                database design, API, interface, deployment and the support
+                afterwards.
               </p>
-              <ul
-                role="list"
-                className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2"
-              >
-                {benefits.map((benefit) => (
-                  <li key={benefit} className="flex gap-x-3">
-                    <i className="h-7 w-5 flex-none" aria-hidden="true" />
-                    {benefit}
+              <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
+                {profile.capabilities.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2.5 text-sm leading-relaxed text-muted-foreground"
+                  >
+                    <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand" />
+                    <span className="text-pretty">{item}</span>
                   </li>
                 ))}
               </ul>
-              <div className="mt-10 flex">
-                <a
-                  href="#"
-                  className="text-sm font-semibold leading-6 text-indigo-400"
+            </Reveal>
+
+            <Reveal className="space-y-6">
+              <h2 className="flex items-baseline gap-3 text-xl font-medium tracking-tight">
+                <span className="font-mono text-xs text-brand">02</span>
+                The toolkit
+              </h2>
+              <div className="grid gap-px overflow-hidden rounded-lg border border-border/80 bg-border/60 sm:grid-cols-2">
+                {stack.map((group) => (
+                  <div key={group.id} className="bg-background p-5">
+                    <div className="mb-3 flex items-baseline justify-between">
+                      <h3 className="text-sm font-medium">{group.title}</h3>
+                      <span className="font-mono text-[11px] text-brand">
+                        {group.id}
+                      </span>
+                    </div>
+                    <p className="font-mono text-xs leading-relaxed text-muted-foreground">
+                      {group.items.join(" · ")}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal className="space-y-6">
+              <h2 className="flex items-baseline gap-3 text-xl font-medium tracking-tight">
+                <span className="font-mono text-xs text-brand">03</span>
+                Education & certification
+              </h2>
+              <ul className="divide-y divide-border/70 overflow-hidden rounded-lg border border-border/80">
+                {education.map((item) => (
+                  <li
+                    key={item.title}
+                    className="flex flex-col gap-1 px-5 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
+                  >
+                    <div>
+                      <p className="text-sm">{item.title}</p>
+                      <p className="mt-0.5 font-mono text-[11px] text-muted-foreground">
+                        {item.org}
+                      </p>
+                    </div>
+                    <span className="shrink-0 font-mono text-[11px] text-muted-foreground/70">
+                      {item.year}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+            <Reveal className="space-y-6">
+              <h2 className="flex items-baseline gap-3 text-xl font-medium tracking-tight">
+                <span className="font-mono text-xs text-brand">04</span>
+                Currently
+              </h2>
+              <ul className="space-y-3">
+                {profile.now.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-3 leading-relaxed text-muted-foreground"
+                  >
+                    <span className="mt-[11px] h-px w-4 shrink-0 bg-brand/50" />
+                    <span className="text-pretty">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+            <Reveal className="space-y-6">
+              <h2 className="flex items-baseline gap-3 text-xl font-medium tracking-tight">
+                <span className="font-mono text-xs text-brand">05</span>
+                Off the clock
+              </h2>
+              <ul className="space-y-3">
+                {offTheClock.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-3 leading-relaxed text-muted-foreground"
+                  >
+                    <span className="mt-[11px] h-px w-4 shrink-0 bg-brand/50" />
+                    <span className="text-pretty">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+            <Reveal>
+              <div className="flex flex-wrap items-center gap-3 rounded-lg border border-border/80 p-6">
+                <p className="mr-auto text-sm text-muted-foreground">
+                  Want the systems I&apos;ve shipped, or the one-page version?
+                </p>
+                <Link
+                  href="/#work"
+                  className="inline-flex h-10 items-center gap-2 rounded-md border border-border px-4 text-sm transition-colors hover:border-brand/50 hover:bg-muted/50"
                 >
-                  See our job postings <span aria-hidden="true">&rarr;</span>
+                  See the work
+                </Link>
+                <a
+                  href={profile.resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-10 items-center gap-2 rounded-md bg-brand px-4 text-sm font-medium text-brand-foreground transition-opacity hover:opacity-90"
+                >
+                  <Download className="h-4 w-4" />
+                  Résumé
                 </a>
               </div>
-            </div>
+            </Reveal>
           </div>
-        </div>
-        <div
-          className="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
-          aria-hidden="true"
-        >
-          <div
-            className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25"
-            style={{
-              clipPath:
-                "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
-            }}
-          />
+
+          {/* Meta rail */}
+          <Reveal delay={80} className="order-1 lg:order-2">
+            <div className="lg:sticky lg:top-24">
+              <dl className="overflow-hidden rounded-lg border border-border/80">
+                {facts.map((fact) => (
+                  <div
+                    key={fact.key}
+                    className="flex items-baseline justify-between gap-4 border-b border-border/70 px-4 py-3 last:border-b-0"
+                  >
+                    <dt className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground/70">
+                      {fact.key}
+                    </dt>
+                    <dd className="text-right text-sm">{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+
+              <a
+                href={`mailto:${profile.email}`}
+                className="mt-4 flex h-10 items-center justify-center gap-2 rounded-md bg-brand text-sm font-medium text-brand-foreground transition-opacity hover:opacity-90"
+              >
+                Hire me
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
+
+              <ul className="mt-4 flex flex-wrap gap-3">
+                {socials.map((social) => {
+                  const Icon = iconMap[social.icon];
+                  return (
+                    <li key={social.name}>
+                      <a
+                        href={social.href}
+                        target={social.icon === "mail" ? undefined : "_blank"}
+                        rel="noopener noreferrer"
+                        className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border/80 text-muted-foreground transition-colors hover:border-brand/50 hover:text-brand"
+                      >
+                        <span className="sr-only">{social.name}</span>
+                        <Icon className="h-4 w-4" />
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </Reveal>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
-
-export default About;
