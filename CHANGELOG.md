@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.5.0](https://github.com/adhamaa/adhamaa/compare/v1.4.0...v1.5.0) (2026-08-29)
+
+
+### Features
+
+* rebuild portfolio with a technical, modern design ([2a36126](https://github.com/adhamaa/adhamaa/commit/2a361262b2ec8aaf117167ec7b790b31a3b8831f))
+* rewrite portfolio content around real work, add résumé ([8b2ec92](https://github.com/adhamaa/adhamaa/commit/8b2ec92819735010e5d61916143fd1c2f8892c36))
+
+
+### Bug Fixes
+
+* **ci:** update Pages deploy workflow to supported action versions ([38865a1](https://github.com/adhamaa/adhamaa/commit/38865a10a22d1197b913c7844b550c7fd1692792))
+* correct project ownership, stack and contact details; add AI workflow ([5c20945](https://github.com/adhamaa/adhamaa/commit/5c209456846146b53170b24b0045283eea2a9343))
+* **lint:** brace JSX text nodes starting with // and scope ESLint config ([d688060](https://github.com/adhamaa/adhamaa/commit/d6880604bd17b01fe4353c7fb0a60c9f2d1f0109))
+
 ## [1.4.0](https://github.com/adhamaa/adhamaa/compare/v1.3.7...v1.4.0) (2023-12-30)
 
 
