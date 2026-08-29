@@ -11,6 +11,8 @@ on:
   workflow_dispatch:
   push:
     branches: ["master"]
+    paths-ignore:
+      - "assets/**"
 
 concurrency:
   group: metrics
@@ -29,6 +31,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics.svg
           user: ${{ github.repository_owner }}
           template: classic
@@ -40,6 +43,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics-languages.svg
           user: ${{ github.repository_owner }}
           template: classic
@@ -54,6 +58,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/metrics-calendar.svg
           user: ${{ github.repository_owner }}
           template: classic
